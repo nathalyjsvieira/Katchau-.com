@@ -7,9 +7,9 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --orange-color: hsl(36, 90%, 54%);
-  --green-color: hsl(166, 90%, 40%);
-  --blue-color: hsl(204, 90%, 50%);
+  --darkred-color: hsl(355, 95%, 17%); /* orange*/
+  --wine-color: hsl(356, 68%, 43%); /* green*/
+  --red-color: hsl(5, 87%, 60%); /* blue */
   --white-color: hsl(0, 0%, 100%);
   --black-color: hsl(210, 8%, 8%);
 
@@ -79,23 +79,79 @@ img {
   overflow: hidden;
 }
 
-.car__orange {
-  --color-car: var(--orange-color);
+.car__first { /* orange*/
+  --color-car: var(--darkred-color);
 }
 
-.car__green {
-  --color-car: var(--green-color);
+.car__second { /* green*/
+  --color-car: var(--wine-color);
 }
 
-.car__blue {
-  --color-car: var(--blue-color);
+.car__third { /* blue */
+  --color-car: var(--red-color);
 }
 
 /*=============== HEADER & NAV ===============*/
+.header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--wine-color);
+  z-index: var(--z-fixed);
+}
 
+
+.nav{
+  position: relative;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo,
+.nav__link{
+  color: var(--white-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.nav__toggle, 
+.nav__close{
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--white-color);
+  border-radius: 1.25rem;
+  cursor: pointer;
+}
+
+.nav__menu{
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background-color: hsla(210, 8%, 8%, .7);
+  -webkit-backdrop-filter: 7rem 3.5rem 3.5rem;
+  width: 80%;
+  height: 100%;
+  padding: 7rem 3.5rem 3.5rem;
+  transition: right .4s;
+}
+
+.nav__list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+
+.nav__close{
+  position: absolute;
+  top: 0.8rem;
+  right: 1.5rem;
+}
 
 /* Show menu */
-
 
 /* Add blur header */
 
